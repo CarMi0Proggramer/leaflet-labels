@@ -1,0 +1,36 @@
+{
+  "name": "leaflet-labels",
+  "version": "0.0.3",
+  "type": "module",
+  "files": [
+    "dist",
+    "index.d.ts"
+  ],
+  "description": "Add custom canvas renderer that support adding labels on Polylines along the path",
+  "keywords": [
+    "leaflet",
+    "labels",
+    "streets",
+    "geojson",
+    "linestring"
+  ],
+  "main": "./dist/leaflet-labels.umd.cjs",
+  "module": "./dist/leaflet-labels.js",
+  "types": "./index.d.ts",
+  "exports": {
+    "types": "./index.d.ts",
+    "import": "./dist/leaflet-labels.js",
+    "require": "./dist/leaflet-labels.umd.cjs"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "vite": "^7.0.0"
+  },
+  "dependencies": {
+    "leaflet": "^1.9.4",
+    "leaflet.markercluster": "^1.5.3"
+  }
+}
