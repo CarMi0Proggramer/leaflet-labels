@@ -1,47 +1,59 @@
-# Leaflet - LabelsRenderer Plugin
+# Leaflet - Plugin LabelsRenderer
 
-This is a `leaflet.js` plugin that adds support for rendering labels along the path in `Polylines` and its based on the famous `L.StreetLabels` and `L.LabelTextCollision` plugins. This plugin aims to provide a faster renderer time than the other plugins mentioned above by using asynchronous functions to draw the draw the labels.
+This is a plugin for `leaflet.js` that adds support for rendering labels along the path of Polylines. It is based on the popular plugins `L.StreetLabels` and `L.LabelTextCollision`. This plugin aims to provide faster rendering times for drawing labels.
 
-# Usage
+## Installation
 
-To use the plugin makes sure to import leaflet before using it. You can use this plugin in two different ways:
+To install and use the plugin, choose one of these methods:
 
-- Install via npm:
+### Using package managers
 
 ```bash
-npm install leaflet-labels
+npm install leaflet-labels-renderer
+# or
+bun add leaflet-labels-renderer
+# or
+pnpm add leaflet-labels-renderer
 ```
 
-Then make sure to import the plugin before you leaflet import.
+### Manual installation
 
-```js
-import L from "leaflet";
-import "leaflet-labels";
+Follow these steps if you prefer not to use a package manager:
+
+### 1. Generate the build
+
+First, you need to generate the plugin build by running the following command:
+
+```bash
+npm run build
 ```
 
-- Adding a script tag:
+### 2. Include the plugin in your project
 
-Download the `leaflet-labels.js` file from the `dist` folder and add the following script tag.
+Make sure to include the `leaflet-labels.js` file from the `dist` folder in your project. You can do this by adding the following line to your HTML:
 
-```js
+```html
 <script src="/path/to/leaflet.js"></script>
 <script src="/path/to/leaflet-labels.js"></script>
 ```
 
-That's it, you can start using the plugin:
+### 3. Use the plugin
 
-```js
+To use the plugin, simply create an instance of `L.LabelsRenderer` or use the `L.labelsRenderer` function and add it to your map. Here's a basic example:
+
+```javascript
 const renderer = L.labelsRenderer({
-  propertyName: "name", // Property that contains the label text,
+  propertyName: "name", // Property containing the label text,
   font: {
-    size: 13, // Size in pixels,
+    size: 13, // Font size in pixels,
     fill: "black",
     stroke: "transparent",
     lineWidth: 4,
   },
   showLabelIf: (feature) => feature.properties.isPrimary == true,
 });
+
 const map = L.map({ renderer });
 
-// Rest map configuration...
+// Additional map setup...
 ```

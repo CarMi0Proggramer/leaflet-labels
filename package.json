@@ -1,7 +1,9 @@
 {
-  "name": "leaflet-labels",
-  "version": "0.0.3",
+  "name": "leaflet-labels-renderer",
+  "version": "1.0.0",
   "type": "module",
+  "license": "MIT",
+  "author": "Carlos Miguel",
   "files": [
     "dist",
     "index.d.ts"

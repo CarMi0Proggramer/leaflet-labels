@@ -2,7 +2,7 @@ import L from "leaflet";
 import "leaflet.markercluster";
 import "./lib/main";
 
-const tileUrl = "http://localhost:8080/maptiler/madrid/{z}/{x}/{y}.png";
+const tileUrl = "https://www.carlos.pcdiez.es/maptiler/madrid/{z}/{x}/{y}.png";
 const renderer = L.labelsRenderer({
   propertyName: "name",
   font: { size: 13 },
@@ -21,7 +21,9 @@ map.doubleClickZoom.disable();
 const maxBounds = L.latLngBounds([-80, 180], [100, -180]);
 map.setMaxBounds(maxBounds);
 
-fetch("http://localhost:8080/api/bombero-callejero/street-map/zones?id=89")
+fetch(
+  "https://www.carlos.pcdiez.es/api/bombero-callejero/street-map/zones?id=89"
+)
   .then((res) => res.json())
   .then(({ zones }) => {
     const primaryStreets = L.geoJson(zones.primaryStreets, {
