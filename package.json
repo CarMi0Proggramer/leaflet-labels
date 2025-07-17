@@ -1,6 +1,6 @@
 {
   "name": "leaflet-labels-renderer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "license": "MIT",
   "author": "Carlos Miguel",
@@ -32,7 +32,6 @@
     "vite": "^7.0.0"
   },
   "dependencies": {
-    "leaflet": "^1.9.4",
-    "leaflet.markercluster": "^1.5.3"
+    "leaflet": "^1.9.4"
   }
 }
