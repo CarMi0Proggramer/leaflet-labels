@@ -1,6 +1,3 @@
-import L from "leaflet";
-import "./lib/main";
-
 const renderer = L.labelsRenderer({
   propertyName: "name",
   font: { size: 13 },

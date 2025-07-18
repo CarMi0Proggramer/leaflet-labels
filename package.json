@@ -1,14 +1,22 @@
 {
   "name": "leaflet-labels-renderer",
   "version": "1.0.1",
-  "type": "module",
-  "license": "MIT",
   "author": "Carlos Miguel",
+  "main": "./dist/leaflet-labels.umd.cjs",
+  "module": "./dist/leaflet-labels.js",
+  "devDependencies": {
+    "vite": "^7.0.0"
+  },
+  "exports": {
+    "types": "./index.d.ts",
+    "import": "./dist/leaflet-labels.js",
+    "require": "./dist/leaflet-labels.umd.cjs"
+  },
+  "description": "Add custom canvas renderer that support adding labels on Polylines along the path",
   "files": [
     "dist",
     "index.d.ts"
   ],
-  "description": "Add custom canvas renderer that support adding labels on Polylines along the path",
   "keywords": [
     "leaflet",
     "labels",
@@ -16,22 +24,11 @@
     "geojson",
     "linestring"
   ],
-  "main": "./dist/leaflet-labels.umd.cjs",
-  "module": "./dist/leaflet-labels.js",
-  "types": "./index.d.ts",
-  "exports": {
-    "types": "./index.d.ts",
-    "import": "./dist/leaflet-labels.js",
-    "require": "./dist/leaflet-labels.umd.cjs"
-  },
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "vite build"
   },
-  "devDependencies": {
-    "vite": "^7.0.0"
-  },
-  "dependencies": {
-    "leaflet": "^1.9.4"
-  }
+  "type": "module",
+  "types": "./index.d.ts"
 }
